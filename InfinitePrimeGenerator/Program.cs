@@ -49,15 +49,14 @@ namespace InfinitePrimeGenerator
 				bool isPrime = true;
 
 				foreach (double n in primesThusFar) {
-					/// testA: eliminate testPrime if it can be factored from our list
+					/// firstCut: eliminate testPrime if it can be factored by anything from our list
 //					if (testPrime % n == 0) {
 //						isPrime = false;
 //						break;		            				
 //					}
 
-					/// testB: elimintate testPrime if complementary factors exist
+					/// secondCut: eliminate testPrime if it's square root can be factored by anything from our list
 				    testSqRoot = Math.Sqrt (testPrime);
-					//if (n > testSqRoot) {
 					if ( testSqRoot % n == 0 ) {
 						isPrime = false;
 						break;
