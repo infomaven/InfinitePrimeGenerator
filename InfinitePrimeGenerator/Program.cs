@@ -20,8 +20,9 @@ namespace InfinitePrimeGenerator
 				ts = stopwatch.Elapsed;
 				string elapsedTime = String.Format ("{0:0000}:{1:0000}.{2:00000000000000}",
 					                     ts.Minutes, ts.Seconds, ts.Milliseconds);
-				//if ( ts.Minutes == 1 )
-				if (ts.Seconds == 1) {
+				if ( ts.Minutes == 1 )
+				/// for local testing
+//				if (ts.Seconds == 1) {
 				    Console.WriteLine ("Max Prime = " + p);
 
 					break;
