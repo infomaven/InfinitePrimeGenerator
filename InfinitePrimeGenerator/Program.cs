@@ -16,11 +16,11 @@ namespace InfinitePrimeGenerator
 			Stopwatch stopwatch = new Stopwatch ();
 			stopwatch.Start ();
 			TimeSpan ts;
-			foreach (int p in AllPrimes()) {
+			foreach (double p in AllPrimes()) {
 				ts = stopwatch.Elapsed;
 				string elapsedTime = String.Format ("{0:0000}:{1:0000}.{2:00000000000000}",
 					                     ts.Minutes, ts.Seconds, ts.Milliseconds);
-				if ( ts.Minutes == 1 )
+				if ( ts.Minutes == 1 ) {
 				/// for local testing
 //				if (ts.Seconds == 1) {
 				    Console.WriteLine ("Max Prime = " + p);
@@ -35,27 +35,40 @@ namespace InfinitePrimeGenerator
 			stopwatch.Stop();
 		}
 
-		private static IEnumerable<int> AllPrimes ()
+		private static IEnumerable<double> AllPrimes ()
 		{
-			List<int> primesThusFar = new List<int> ();
-			primesThusFar.Add(2);
+			List<double> primesThusFar = new List<double> ();
+			primesThusFar.Add (2);
 			yield return 2;
-			primesThusFar.Add(3);
+			primesThusFar.Add (3);
 			yield return 3;
 
-			int testPrime = 5;
+			double testPrime = 5;
+			double testSqRoot;
 			while (true) {
 				bool isPrime = true;
-				foreach (int n in primesThusFar) {
-					if (testPrime % n == 0) {
+
+				foreach (double n in primesThusFar) {
+					/// testA: eliminate testPrime if it can be factored from our list
+//					if (testPrime % n == 0) {
+//						isPrime = false;
+//						break;		            				
+//					}
+
+					/// testB: elimintate testPrime if complementary factors exist
+				    testSqRoot = Math.Sqrt (testPrime);
+					//if (n > testSqRoot) {
+					if ( testSqRoot % n == 0 ) {
 						isPrime = false;
-						break;						
+						break;
 					}
+                   
 				}
 				if (isPrime) {
 					primesThusFar.Add (testPrime);
 					yield return testPrime;
 				}
+				/// make sure we always get an odd number
 				testPrime += 2;
 			}
 		}
