@@ -37,22 +37,29 @@ Key Observations and learnings for each are annotated below:
 - Used internal BitArray collection to keep track of eligible primes. 
 - Changing size of this internal BitArray had direct impact on the max prime values returned by the function
 - There seemed to be a "sweet spot" in terms of the max prime returned. Once a certain point was passed, there were diminishing returns. 
-For this particular experiement, the maximum values were achieved with array sizes between 300000000 and 300000560. 
-Array sizes larger than this saw a steady decline in max prime values. 
+For this particular experiement, the maximum prime values seemed to reach a plateau for array sizes between 300000000 and 300000560. 
+Array sizes larger than this saw a steady decline in max prime values, which is an indicator of a need for further optimization.
 
-Max Value achieved in 60 seconds: 22536931
+Max Value achieved in 60 seconds: 27710693
 
 < insert chart here > 
 
 
 Next steps: 
-Several other algorithms were found while preparing this code sample, but there was not time to investigate them. This includes the following: 
+Several other algorithms were found while preparing this code sample, but there was not time to investigate or implement them. 
+This includes the following: 
 - Sieve of Atkins
 
-- Deeper implementation of skip sets 
+- Deeper implementation of skip sets using multiples of primes
 https://en.wikibooks.org/wiki/Some_Basic_and_Inefficient_Prime_Number_Generating_Algorithms
 
-- 
+- C# Parallel Extensions
+
+
+- Miller-Rabin Primality Test
+https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test
+
+
 
 
 

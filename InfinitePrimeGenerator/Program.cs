@@ -20,52 +20,39 @@ namespace InfinitePrimeGenerator
 			stopwatch.Start();
 			TimeSpan ts;
 
-			/*
-			/// brute force (most simple)
-//			foreach (double p in BasicPrimeGenerator()) {
-//				ts = stopwatch.Elapsed;
-//				string elapsedTime = String.Format ("{0:0000}:{1:0000}.{2:00000000000000}",
-//					                     ts.Minutes, ts.Seconds, ts.Milliseconds);
-//				if ( ts.Minutes == 1 ) {
-//				    Console.WriteLine ("Max Prime = " + p);
-//					break;
-//				} else {
-//					Console.Write (p + ": " + elapsedTime + "\n");
-//				}
-//			}
-*/
+		
 
-/*
-			/// simple algorithms 1 & 2
-//			foreach (double p in AllPrimes()) {
-//				ts = stopwatch.Elapsed;
-//				string elapsedTime = String.Format ("{0:0000}:{1:0000}.{2:00000000000000}",
-//					                     ts.Minutes, ts.Seconds, ts.Milliseconds);
-//				if ( ts.Minutes == 1 ) {
-//				    Console.WriteLine ("Max Prime = " + p);
-//					break;
-//				} else {
-//					Console.Write (p + ": " + elapsedTime + "\n");
-//				}
-//			}
-*/
-
-			// using Sieve of Eratosthenes 
-			foreach (double p in SieveOfEratosthenes.GeneratedPrimes())
-			{
+			/// base case (brute force) -- 
+			foreach (double p in AllPrimes()) {
 				ts = stopwatch.Elapsed;
-				string elapsedTime = String.Format("{0:0000}:{1:0000}.{2:00000000000000}",
+				string elapsedTime = String.Format ("{0:0000}:{1:0000}.{2:00000000000000}",
 					                     ts.Minutes, ts.Seconds, ts.Milliseconds);
-				if (ts.Minutes == 1)
-				{
-					Console.WriteLine("Max Prime = " + p);
+				if ( ts.Minutes == 1 ) {
+				    Console.WriteLine ("Max Prime = " + p);
 					break;
-				}
-				else
-				{
-					Console.Write(p + ": " + elapsedTime + "\n");
+				} else {
+					Console.Write (p + ": " + elapsedTime + "\n");
 				}
 			}
+
+
+			// using Sieve of Eratosthenes 
+//			foreach (double p in SieveOfEratosthenes.GeneratedPrimes())
+//			{
+//				ts = stopwatch.Elapsed;
+//				string elapsedTime = String.Format("{0:0000}:{1:0000}.{2:00000000000000}",
+//					                     ts.Minutes, ts.Seconds, ts.Milliseconds);
+//				if (ts.Minutes == 1)
+//				{
+//					Console.WriteLine("Max Prime = " + p);
+//					break;
+//				}
+//				else
+//				{
+//					Console.Write(p + ": " + elapsedTime + "\n");
+//				}
+//			}
+//-----------------
 		
 				stopwatch.Stop();
 		}
