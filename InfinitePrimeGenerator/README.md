@@ -40,6 +40,11 @@ Key Observations and learnings for each are annotated below:
 For this particular experiement, the maximum values were achieved with array sizes between 300000000 and 300000560. 
 Array sizes larger than this saw a steady decline in max prime values. 
 
+Reference-style: 
+![alt text][chart]
+
+[chart]: https://github.com/infomaven/InfinitePrimeGenerator/blob/master/20160530062546.png "Chart - Max Primes"
+
 Max Value achieved in 60 seconds: 27710693. 
 - BitArray size set to 300000000
 
