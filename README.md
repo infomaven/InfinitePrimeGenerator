@@ -26,11 +26,11 @@ Key Observations and learnings for each are annotated below:
 - uses modulus to test primality of each testPrime value
 - uses C# yield return syntax to reduce overhead
 - preloads list with known primes and checks only odd numbers for remainder of execution time
-- max prime = 
+- Max value achieved in 60 seconds:  
 
 2) Optimization: using square root instead of full testPrime
 - Reduced number of comparisons for determining primality
-- max prime = 
+- Max value achieved in 60 seconds:  
 
 3) Optimization: Sieve of Eratosphenes:
 - Has initial delay as the BitArray is loaded. This makes program flow/execution control more difficult
@@ -40,10 +40,17 @@ Key Observations and learnings for each are annotated below:
 For this particular experiement, the maximum prime values seemed to reach a plateau for array sizes between 300000000 and 300000560. 
 Array sizes larger than this saw a steady decline in max prime values, which is an indicator of a need for further optimization.
 
+<<<<<<< HEAD:README.md
 Max Value achieved in 60 seconds: 27710693
+=======
+Reference-style: 
+![alt text][chart]
+>>>>>>> 8a6153ddb820223adf1a9117fceaa7668452258b:InfinitePrimeGenerator/README.md
 
-< insert chart here > 
+[chart]: https://github.com/infomaven/InfinitePrimeGenerator/blob/master/20160530062546.png "Chart - Max Primes"
 
+Max Value achieved in 60 seconds: 27710693. 
+- BitArray size set to 300000000
 
 Next steps: 
 Several other algorithms were found while preparing this code sample, but there was not time to investigate or implement them. 
@@ -53,12 +60,15 @@ This includes the following:
 - Deeper implementation of skip sets using multiples of primes
 https://en.wikibooks.org/wiki/Some_Basic_and_Inefficient_Prime_Number_Generating_Algorithms
 
+<<<<<<< HEAD:README.md
 - C# Parallel Extensions
 
 
 - Miller-Rabin Primality Test
 https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test
 
+=======
+>>>>>>> 8a6153ddb820223adf1a9117fceaa7668452258b:InfinitePrimeGenerator/README.md
 
 
 
