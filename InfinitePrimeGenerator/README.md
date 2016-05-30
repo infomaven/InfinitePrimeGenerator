@@ -26,11 +26,11 @@ Key Observations and learnings for each are annotated below:
 - uses modulus to test primality of each testPrime value
 - uses C# yield return syntax to reduce overhead
 - preloads list with known primes and checks only odd numbers for remainder of execution time
-- max prime = 
+- Max value achieved in 60 seconds:  
 
 2) Optimization: using square root instead of full testPrime
 - Reduced number of comparisons for determining primality
-- max prime = 
+- Max value achieved in 60 seconds:  
 
 3) Optimization: Sieve of Eratosphenes:
 - Has initial delay as the BitArray is loaded. This makes program flow/execution control more difficult
@@ -40,10 +40,8 @@ Key Observations and learnings for each are annotated below:
 For this particular experiement, the maximum values were achieved with array sizes between 300000000 and 300000560. 
 Array sizes larger than this saw a steady decline in max prime values. 
 
-Max Value achieved in 60 seconds: 22536931
-
-< insert chart here > 
-
+Max Value achieved in 60 seconds: 27710693. 
+- BitArray size set to 300000000
 
 Next steps: 
 Several other algorithms were found while preparing this code sample, but there was not time to investigate them. This includes the following: 
@@ -52,7 +50,7 @@ Several other algorithms were found while preparing this code sample, but there 
 - Deeper implementation of skip sets 
 https://en.wikibooks.org/wiki/Some_Basic_and_Inefficient_Prime_Number_Generating_Algorithms
 
-- 
+
 
 
 
