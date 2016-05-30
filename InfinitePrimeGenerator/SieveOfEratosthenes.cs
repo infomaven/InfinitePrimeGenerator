@@ -49,12 +49,10 @@ private static BitArray BuildSieve(int limit)
 
 public static List<int> GeneratedPrimes()
 {
-	int MAX_INT32 = 2147483647;
-	int n = MAX_INT32;
-    //int limit = ApproximateNthPrime(n);	// method is doing calculations that produce a positive number
-    //int limit = 300000000;
-    int limit = (int) Math.Sqrt (MAX_INT32) ;
-    Console.WriteLine ("DEBUG: limit as an int = " + limit);
+    int MAX_INT32 = 2147483647;
+    int n = MAX_INT32;
+    // using a lower fidelity limit because there were problems with a calculated value going negative
+    int limit = 300000000; 
     BitArray bits = BuildSieve(limit); // limit variable has lost its assigned value when called here
     List<int> primes = new List<int>();
     	for (int i = 0, found = 0; i < limit && found < n; i++)
