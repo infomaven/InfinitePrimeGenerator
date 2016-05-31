@@ -1,7 +1,8 @@
 ﻿# Infinite Prime Generator
+PROBLEM: 
 Develop a program to generate max prime value in 60 seconds
 
-rules: 
+RULES: 
 1. Use classic definition of a prime number: 
 A prime number is an integer which is divisible by only 2 factors, itself 
  and 1. For example, 2, 3, 5, 7, 11, 13, 17 are prime numbers, but 1, 4, 6, 
@@ -17,7 +18,7 @@ A prime number is an integer which is divisible by only 2 factors, itself
 
 =======================
 
-about this solution: 
+ABOUT THIS SOLUTION: 
 While arriving at a final version of the solution for this problem, 
 I learned and tried a number of different algorithms to find an optimal solution. 
 Key Observations and learnings for each are annotated below: 
@@ -50,16 +51,16 @@ Reference-style:
 Max Value achieved in 60 seconds: 27710693. 
 - BitArray size set to 300000000
 
-Next steps: 
-Several other algorithms were found while preparing this code sample, but there was not time to investigate or implement them. 
-This includes the following: 
+NEXT STEPS: 
+While preparing this code, several other algorithms were found, but there was not time to explore or implement them. 
+I strongly believe the algorithm could be optimized even further with one or more of these approaches. 
+
 - Sieve of Atkins
 
-- Deeper implementation of skip sets using multiples of primes
+- More extensive use of skip sets for multiples of existing primes  
 https://en.wikibooks.org/wiki/Some_Basic_and_Inefficient_Prime_Number_Generating_Algorithms
 
-- C# Parallel Extensions
-
+- C# Parallel Extensions & LINQ
 
 - Miller-Rabin Primality Test
 https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test
