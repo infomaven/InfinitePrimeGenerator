@@ -53,7 +53,7 @@ Max Value achieved in 60 seconds: 27710693.
 
 NEXT STEPS: 
 While preparing this code, several other algorithms were found, but there was not time to explore or implement them. 
-I strongly believe the algorithm could be optimized even further with one or more of these approaches. 
+I strongly believe this implementation could be optimized even further with one or more of these approaches. 
 
 - Sieve of Atkins
 
